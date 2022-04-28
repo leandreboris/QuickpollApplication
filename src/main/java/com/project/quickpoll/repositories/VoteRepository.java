@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.project.quickpoll.models.Vote;
 
-public interface VoteRepository extends CrudRepository<Vote, Long>{
-
+public interface VoteRepository extends CrudRepository<Vote, Long> {
+	public Iterable<Vote> findVoteByPoll(Long pollId);
 }
